@@ -22,13 +22,12 @@ services:
       - "jupyterhub-data:/data"
     environment:
       # This username will be a JupyterHub admin
-      JUPYTERHUB_ADMIN: admin
+      - JUPYTERHUB_ADMIN=admin
       # JupyterHub will spawn this Notebook image for users
-      DOCKER_NOTEBOOK_IMAGE: quay.io/jupyter/base-notebook:latest
+      - DOCKER_NOTEBOOK_IMAGE=quay.io/jupyter/base-notebook:latest
       # Notebook directory inside user image
-      DOCKER_NOTEBOOK_DIR: /home/jovyan/work
-      SERVICE_URL_JUPYTER_8000
+      - DOCKER_NOTEBOOK_DIR=/home/jovyan/work
+      - SERVICE_URL_JUPYTER_8000
 
 volumes:
   jupyterhub-data:
-
