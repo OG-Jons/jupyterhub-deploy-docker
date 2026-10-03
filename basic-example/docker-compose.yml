@@ -27,6 +27,7 @@ services:
       DOCKER_NOTEBOOK_IMAGE: quay.io/jupyter/base-notebook:latest
       # Notebook directory inside user image
       DOCKER_NOTEBOOK_DIR: /home/jovyan/work
+      DOCKER_NETWORK_NAME: coolify
 
 volumes:
   jupyterhub-data:
