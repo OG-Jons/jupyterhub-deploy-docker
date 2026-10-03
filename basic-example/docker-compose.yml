@@ -41,5 +41,7 @@ volumes:
   jupyterhub-data:
 
 networks:
+  coolify:
+    external: true
   jupyterhub-network:
     name: jupyterhub-network
