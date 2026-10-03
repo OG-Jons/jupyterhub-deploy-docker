@@ -15,7 +15,6 @@ services:
     image: jupyterhub
     container_name: jupyterhub
     networks:
-      - coolify
       - jupyterhub-network
     volumes:
       # The JupyterHub configuration file
@@ -41,7 +40,5 @@ volumes:
   jupyterhub-data:
 
 networks:
-  coolify:
-    external: true
   jupyterhub-network:
     name: jupyterhub-network
